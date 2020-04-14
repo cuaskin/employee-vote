@@ -10,25 +10,19 @@ interface IProfileProps {
 const Profile: FC<IProfileProps> = React.memo(({ employee }) => {
   return (
     <div className={styles.profile}>
-      <Flex>
-        <img src={employee.avatarUrl} alt="" />
-        <div className={styles.about}>
-          <h1>{[employee.firstName, employee.lastName].join(' ')}</h1>
-          <h3>{employee.jobTitle}</h3>
-          <Flex>
-            <span>Email:</span>
-            <span>{employee.email}</span>
-          </Flex>
-          <Flex>
-            <span>Phone:</span>
-            <span>{employee.phone}</span>
-          </Flex>
-          <Flex>
-            <span>Address:</span>
-            <span>{employee.address}</span>
-          </Flex>
+      <img src={employee.avatarUrl} alt="" />
+      <div className={styles.about}>
+        <h1>{[employee.firstName, employee.lastName].join(' ')}</h1>
+        <h3>{employee.jobTitle}</h3>
+        <div className={styles.info}>
+          <span>Email:</span>
+          <span>{employee.email}</span>
+          <span>Phone:</span>
+          <span>{employee.phone}</span>
+          <span>Address:</span>
+          <span>{employee.address}</span>
         </div>
-      </Flex>
+      </div>
     </div>
   );
 });

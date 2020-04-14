@@ -1,9 +1,35 @@
+@import 'static/sass/variables.scss';
 .profile {
+  display: flex;
+  align-items: flex-start;
   background-color: white;
   padding: 15px;
   border-radius: 5px;
 
   .about {
     padding: 0 16px;
+    flex: 1;
+  }
+
+  img {
+    width: 140px;
+    height: 140px;
+  }
+
+  h1 {
+    margin: 0;
+  }
+
+  h3 {
+    margin: 0 0 20px 0;
+    color: $placeholderColor;
+  }
+
+  .info {
+    border-top: 1px solid $borderColor;
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-row-gap: 10px;
   }
 }
