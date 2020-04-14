@@ -1,0 +1,22 @@
+
+type Employee {
+  id: ID
+  firstName: String @fake(type: firstName, locale: en_CA)
+  lastName: String @fake(type: lastName, locale: en_CA)
+  gender: String @examples(values: ["male", "female"])
+  vote:Int @fake(type:number, options: { minNumber: 0, maxNumber: 100})
+  email: String @fake(type: email)
+  phone: String @fake(type: phoneNumber)
+  avatarUrl: String @fake(type: avatarUrl)
+  jobTitle: String @fake(type: jobTitle)
+  address: String @fake(type: streetAddress, options: { useFullAddress: true })
+}
+
+type Query {
+  employees: [Employee] 
+  employee(id: ID): Employee
+}
+
+type Mutation {
+  saveEmployee(id:ID,vote:Int):Employee
+}

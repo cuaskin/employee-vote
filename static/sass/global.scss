@@ -1,0 +1,12 @@
+@import './variables.scss';
+
+body {
+  background-color: $backgroundColor;
+  margin: 0;
+  font-family: $font-primary;
+}
+
+* {
+  box-sizing: border-box;
+  outline: none;
+}

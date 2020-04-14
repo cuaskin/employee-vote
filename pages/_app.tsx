@@ -1,9 +1,10 @@
-import App from "next/app";
-import React from "react";
-import withReduxStore from "../hoc/withReduxStore";
-import { Provider } from "react-redux";
-import { Store } from "redux";
-import "../styles.scss";
+import App from 'next/app';
+import React from 'react';
+import Layout from 'components/Layout';
+import withReduxStore from 'hoc/withReduxStore';
+import { Provider } from 'react-redux';
+import { Store } from 'redux';
+import 'static/sass/global.scss';
 
 interface AppProps {
   reduxStore: Store;
@@ -14,7 +15,9 @@ class MyApp extends App<AppProps> {
     const { Component, pageProps, reduxStore } = this.props;
     return (
       <Provider store={reduxStore}>
-        <Component {...pageProps} />
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
       </Provider>
     );
   }

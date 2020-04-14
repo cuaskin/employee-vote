@@ -1,3 +1,3 @@
 export default {
-  INCREMENT: "INCREMENT",
+  SET_DATA: "SET_DATA",
 };

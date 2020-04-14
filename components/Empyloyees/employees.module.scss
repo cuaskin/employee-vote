@@ -1,0 +1,27 @@
+@import 'static/sass/variables.scss';
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.thead {
+  border-bottom: 1px solid $borderColor;
+  th {
+    text-align: left;
+    padding: 8px 0;
+    text-transform: uppercase;
+    color: $placaholderColor;
+    font-size: 12px;
+    border: none;
+  }
+}
+
+.tbody {
+  td {
+    padding: 16px 0;
+  }
+  tr {
+    border-bottom: 1px solid $borderColor;
+  }
+}
