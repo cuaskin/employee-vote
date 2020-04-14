@@ -3,6 +3,9 @@ import Avatar from 'components/Avatar';
 import Flex from 'components/Flex';
 import Voting from 'components/Voting';
 import _ from 'lodash';
+import routes from 'routes';
+
+const { Link } = routes;
 
 interface IEmployeeProps {
   employee: IEmployee;
@@ -14,7 +17,9 @@ const Employee: FC<IEmployeeProps> = React.memo(({ employee }) => {
       <td>
         <Flex>
           <Avatar employee={employee} />
-          <span>{[employee.firstName, employee.lastName].join(' ')}</span>
+          <Link route={`/employee/${employee.id}`}>
+            {[employee.firstName, employee.lastName].join(' ')}
+          </Link>
         </Flex>
       </td>
       <td>{employee.jobTitle}</td>
