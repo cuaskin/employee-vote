@@ -7,5 +7,4 @@ COPY ./graphql/schema.faker.graphql /usr/src/app
 RUN npm install -g graphql-faker
 
 EXPOSE 9002
-
 CMD graphql-faker ./schema.faker.graphql

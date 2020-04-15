@@ -1,3 +1,3 @@
 const routes = (module.exports = require('next-routes')());
 
-routes.add('/', '/').add('profile', '/employee/:id');
+routes.add('home', '/').add('profile', '/employee/:id');

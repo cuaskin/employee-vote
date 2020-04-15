@@ -1,20 +1,19 @@
-version: "3"
+version: "3.4"
 services:
-  frontend:
+  web:
     build:
       context: ./
+      dockerfile: Dockerfile.web
     environment:
       - PORT=3000
       - NODE_ENV=production
     ports:
       - 3000:3000
-    env_file:
-      - .env
     links:
-      - graphql
+      - graphql:api
   graphql:
     build:
       context: ./
-      dockerfile: Dockerfile-graphql
+      dockerfile: Dockerfile.graphql
     ports:
       - 9002:9002
