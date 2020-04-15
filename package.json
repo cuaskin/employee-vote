@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "node -r dotenv/config server.js",
+    "dev": "node server.js",
     "build": "next build",
-    "start": "NODE_ENV=production node -r dotenv/config server.js"
+    "start": "NODE_ENV=production node server.js"
   },
   "dependencies": {
     "axios": "^0.19.2",

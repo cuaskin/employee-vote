@@ -9,7 +9,17 @@ This project are sample single page aplication with server side rendering.
 - [Sass](https://sass-lang.com/) is the most mature, stable, and powerful professional grade CSS extension language in the world.
 - [Redux](https://redux.js.org/) is a predictable state container for JavaScript apps.
 
-## GraphQL Faker
+## Quickly
+
+Quicky run with `docker-compose`.
+
+```bash
+docker-compose up
+```
+
+## Manual
+
+### GraphQL Faker
 
 Mock or extend your GraphQL API with faked data. [more](https://github.com/APIs-guru/graphql-faker)
 
@@ -22,7 +32,7 @@ $ graphql-faker ./graphql/schema.faker.graphql
 
 ```
 
-## Run Project
+### Run Project
 
 ```bash
 # install dependencies
